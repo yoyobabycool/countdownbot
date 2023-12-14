@@ -1,5 +1,6 @@
 import tweepy
 import os
+import requests
 from datetime import date
 consumer_key = os.environ['TWITTER_API_KEY']
 consumer_secret = os.environ['TWITTER_API_SECRET_KEY']
