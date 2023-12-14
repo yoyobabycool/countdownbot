@@ -1,7 +1,7 @@
 import tweepy
 import os
-import requests
 from datetime import date
+from json import dumps
 consumer_key = os.environ['TWITTER_API_KEY']
 consumer_secret = os.environ['TWITTER_API_SECRET_KEY']
 access_token = os.environ['TWITTER_ACCESS_TOKEN']
@@ -11,4 +11,5 @@ client = tweepy.Client(consumer_key=consumer_key,
                     access_token=access_token,
                     access_token_secret=access_token_secret)
 days = date(2024,4,5) - date.today()
-response = client.create_tweet(text=days)
+cd = dumps(days, default=json_serial)
+response = client.create_tweet(text=cd)
