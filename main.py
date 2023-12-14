@@ -11,5 +11,4 @@ client = tweepy.Client(consumer_key=consumer_key,
                     access_token=access_token,
                     access_token_secret=access_token_secret)
 days = date(2024,4,5) - date.today()
-cd = dumps(days, default=str)
-response = client.create_tweet(text=cd)
+response = client.create_tweet(text=days.days)
