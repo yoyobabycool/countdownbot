@@ -1,6 +1,7 @@
 import tweepy
 import os
 from datetime import date
+from datetime import timedelta
 from json import dumps
 consumer_key = os.environ['TWITTER_API_KEY']
 consumer_secret = os.environ['TWITTER_API_SECRET_KEY']
